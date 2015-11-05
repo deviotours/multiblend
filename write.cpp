@@ -248,43 +248,44 @@ void tiff_out() {
             strip_p += mincount << 2;
             p += mincount;
           }
+
           /*
-                                      if (m==MASKON || g_nomask) {
-                                              if (g_workbpp==8) {
-                                                      for (j=0; j<mincount; j++)
-             {
-                                                              ((uint8*)strip)[strip_p++]=((uint8**)g_out_channels)[0][p];
-                                                              ((uint8*)strip)[strip_p++]=((uint8**)g_out_channels)[1][p];
-                                                              ((uint8*)strip)[strip_p++]=((uint8**)g_out_channels)[2][p];
-                                                              if (!g_nomask)
-             ((uint8*)strip)[strip_p++]=0xff;
-                                                              p++;
-                                                      }
-                                              } else {
-                                                      for (j=0; j<mincount; j++)
-             {
-                                                              ((uint16*)strip)[strip_p++]=((uint16**)g_out_channels)[0][p];
-                                                              ((uint16*)strip)[strip_p++]=((uint16**)g_out_channels)[1][p];
-                                                              ((uint16*)strip)[strip_p++]=((uint16**)g_out_channels)[2][p];
-                                                              if (!g_nomask)
-             ((uint16*)strip)[strip_p++]=0xffff;
-                                                              p++;
-                                                      }
-                                              }
-                                      } else {
-                                              if (g_workbpp==8) {
-                                                      if (g_nomask)
-             blank=mincount*3; else blank=mincount<<2;
-                                                      memset(&((uint8*)strip)[strip_p],0,blank);
-                                                      strip_p+=mincount<<2;
-                                              } else {
-                                                      if (g_nomask)
-             blank=mincount*6; else blank=mincount<<3;
-                                                      memset(&((uint16*)strip)[strip_p],0,blank);
-                                                      strip_p+=mincount<<2;
-                                              }
-                                              p+=mincount;
-                                      }
+          if (m==MASKON || g_nomask) {
+            if (g_workbpp==8) {
+              for (j=0; j<mincount; j++)
+              {
+                ((uint8*)strip)[strip_p++]=((uint8**)g_out_channels)[0][p];
+                ((uint8*)strip)[strip_p++]=((uint8**)g_out_channels)[1][p];
+                ((uint8*)strip)[strip_p++]=((uint8**)g_out_channels)[2][p];
+                if (!g_nomask)
+                  ((uint8*)strip)[strip_p++]=0xff;
+                p++;
+              }
+            } else {
+              for (j=0; j<mincount; j++)
+              {
+                ((uint16*)strip)[strip_p++]=((uint16**)g_out_channels)[0][p];
+                ((uint16*)strip)[strip_p++]=((uint16**)g_out_channels)[1][p];
+                ((uint16*)strip)[strip_p++]=((uint16**)g_out_channels)[2][p];
+                if (!g_nomask)
+                  ((uint16*)strip)[strip_p++]=0xffff;
+                p++;
+              }
+            }
+          } else {
+            if (g_workbpp==8) {
+              if (g_nomask)
+                blank=mincount*3; else blank=mincount<<2;
+              memset(&((uint8*)strip)[strip_p],0,blank);
+              strip_p+=mincount<<2;
+            } else {
+              if (g_nomask)
+                blank=mincount*6; else blank=mincount<<3;
+              memset(&((uint16*)strip)[strip_p],0,blank);
+              strip_p+=mincount<<2;
+            }
+            p+=mincount;
+          }
           */
 
           for (i = 0; i < g_numimages; i++) maskcount[i] -= mincount;
