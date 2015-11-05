@@ -8,7 +8,7 @@ void output(int level, const char *fmt, ...) {
   }
 }
 
-#ifdef WIN32
+#ifdef _WIN32
 class my_timer {
  public:
   void set() { QueryPerformanceCounter(&t1); }
@@ -44,7 +44,7 @@ void report_time(const char *name, double time) {
   if (g_timing) output(0, "%s: %.3fs\n", name, time);
 }
 
-#ifndef WIN32
+#ifndef _WIN32
 #define SNPRINTF snprintf
 int _stricmp(const char *a, const char *b) { return strcasecmp(a, b); }
 void *_aligned_malloc(size_t size, int boundary) {
@@ -65,7 +65,7 @@ void clear_temp() {
     for (c = 0; c < g_numchannels; c++) {
       if (g_images[i].channels[c].f) {
         fclose(g_images[i].channels[c].f);
-#ifdef WIN32
+#ifdef _WIN32
         DeleteFile(g_images[i].channels[c].filename);
 #endif
       }

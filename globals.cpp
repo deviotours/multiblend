@@ -1,4 +1,4 @@
-#ifndef WIN32
+#ifndef _WIN32
 void fopen_s(FILE **f, const char *filename, const char *mode);
 #endif
 
