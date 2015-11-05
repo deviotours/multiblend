@@ -1,5 +1,6 @@
 /*
   multiblend (c) 2013 David Horman
+  additional multiblend contributions (c) 2015 Devio LLC
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
