@@ -1,6 +1,4 @@
-***************************************************************************
-**    multiblend
-***************************************************************************
+# multiblend
 
 multiblend (c) 2014 David Horman
 
@@ -20,11 +18,10 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301 USA.
 
 The author can be contacted at: david.horman@jerseymail.co.uk
 
-***************************************************************************
-**    libtiff
-***************************************************************************
+# libtiff
 
 Copyright (c) 1988-1997 Sam Leffler
+
 Copyright (c) 1991-1997 Silicon Graphics, Inc.
 
 Permission to use, copy, modify, distribute, and sell this software and 
@@ -46,9 +43,7 @@ WHETHER OR NOT ADVISED OF THE POSSIBILITY OF DAMAGE, AND ON ANY THEORY OF
 LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE 
 OF THIS SOFTWARE.
 
-***************************************************************************
-**    libjpeg-turbo
-***************************************************************************
+# libjpeg-turbo
 
 libjpeg-turbo is licensed under a non-restrictive, BSD-style license
 (see README.)  The TurboJPEG/OSS wrapper (both C and Java versions) and
