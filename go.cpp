@@ -99,5 +99,5 @@ void go(char **argv, int input_args) {
     timer.report("write");
   }
 
-  //	ppm_out(out_channels);
+  // ppm_out(out_channels);
 }

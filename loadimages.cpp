@@ -956,8 +956,8 @@ void load_images(char **argv, int argc) {
       minstripcount = 0;
       for (s = 0; s < (int)TIFFNumberOfStrips(I.tiff) - 1; s++) {
         temp = TIFFRawStripSize(I.tiff, s);
-        //				printf("%d: %d\n",s,temp);
-        //				if ((s&63)==0) getchar();
+        // printf("%d: %d\n",s,temp);
+        // if ((s&63)==0) getchar();
         if (temp < minstripsize) {
           minstripsize = temp;
           minstripcount = 1;

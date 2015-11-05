@@ -184,8 +184,8 @@ int main(int argc, char *argv[]) {
         g_compression = COMPRESSION_LZW;
       else if (_stricmp(comp, "packbits") == 0)
         g_compression = COMPRESSION_PACKBITS;
-      //			else if (_stricmp(comp,"deflate")==0)
-      // g_compression=COMPRESSION_DEFLATE;
+      // else if (_stricmp(comp,"deflate")==0)
+      //   g_compression=COMPRESSION_DEFLATE;
       else if (_stricmp(comp, "none") == 0)
         g_compression = COMPRESSION_NONE;
       else

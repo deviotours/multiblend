@@ -287,7 +287,7 @@ void rightdownxy() {
         if (maskcount[i] < mincount) mincount = maskcount[i];
         if (mask[i] != MASKOFF) {
           xorcount++;
-          //					xorimage=i;
+          // xorimage=i;
         }
       }
 
@@ -626,8 +626,8 @@ void make_seams() {
     g_seams[p++] = count << 8 | a;
     count = 1;
 
-    //		if ((p+(g_workwidth<<3))>size) {
-    //			size+=g_workwidth<<4;
+    // if ((p+(g_workwidth<<3))>size) {
+    //   size+=g_workwidth<<4;
     if ((size_t)(p + ((g_numimages * g_workheight) << 1)) > size) {
       size += (g_numimages * g_workheight) << 2;
       g_seams = (uint32 *)realloc(g_seams, size * sizeof(uint32));

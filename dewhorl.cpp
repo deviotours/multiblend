@@ -1,7 +1,7 @@
 void dewhorl_old() {
   int l;
   int x;
-  //	int zero;
+  //  int zero;
   int total = 0;
 
   output(1, "dewhorling...\n");
@@ -49,8 +49,8 @@ void dewhorl() {
     // if (y==1) printf("%d\n=\n",y);
     d = 1 - sin(y * (1.0 / end_row) * 3.1415926535897932384626433832795 * 0.5);
     window = (int)(g_workwidth * 0.5 * d);
-    //		window=100;
-    //		printf("%d,%d\n",y,window);
+    // window=100;
+    // printf("%d,%d\n",y,window);
     for (x = 0; x < g_workwidth; x++) {
       // if (y==1) printf("=%d: ",x);
       xx = (x - window);
@@ -71,7 +71,7 @@ void dewhorl() {
         ((short *)g_line0)[x] = (short)total;
       else
         ((int *)g_line0)[x] = (int)total;
-      //			((short*)p)[x]=x<<3;
+      // ((short*)p)[x]=x<<3;
       // if (y==1) getchar();
     }
     memcpy(p, g_line0, g_output_pyramid[0].pitch

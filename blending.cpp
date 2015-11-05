@@ -534,7 +534,7 @@ void mask_into_output(struct_level *input, float *mask, struct_level *output,
   }
 
   // advance output pointer to first active line
-  //	out_p+=output->pitch*y_extra;
+  //  out_p+=output->pitch*y_extra;
   out_p = (void *)&((char *)out_p)[(output->pitch * y_extra) << bpp_shift];
 
   for (y = y_extra; y < ylim; y++) {
